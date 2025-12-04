@@ -20,7 +20,9 @@ class data_set:
         self.data_set.pop("mode")
     
     # def recommend_song(self, artisit, value): 
-
+        #Have code give song that meets cirteria and is most populaarrrr
     # def most_popular_song(self, artist): lkk
+        #Gives most popular song by artist
 
+    #Also make a who sings this? function
 
