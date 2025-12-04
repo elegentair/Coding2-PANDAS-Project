@@ -1,6 +1,6 @@
 # Most streamed spotify songs 2023
 import pandas as pd
-df = pd.read_csv("/workspaces/Coding2-PANDAS-Project/spotify-2023.csv")
+df = pd.read_csv("/workspaces/Coding2-PANDAS-Project/spotify-2023-clean.csv")
 
 # df.head()
 # df.describe()
