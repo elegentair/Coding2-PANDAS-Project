@@ -1,10 +1,6 @@
 # Most streamed spotify songs 2023
 import pandas as pd
-df = pd.read_csv("/workspaces/Coding2-PANDAS-Project/spotify-2023-clean.csv")
-
-# df.head()
-# df.describe()
-# df.columns()
+df = pd.read_csv("/workspaces/Coding2-PANDAS-Project/spotify-2023.csv")
 
 class data_set: 
     def __init__(self, set): 
@@ -19,10 +15,11 @@ class data_set:
         self.data_set.pop("key")
         self.data_set.pop("mode")
     
-    # def recommend_song(self, artisit, value): 
-        #Have code give song that meets cirteria and is most populaarrrr
-    # def most_popular_song(self, artist): lkk
-        #Gives most popular song by artist
+    def recommend_song(self, artisit, value): # by danceabiltiy etc. 
+        recommended = df.sort_values(by = '')
 
-    #Also make a who sings this? function
+    def most_popular_song(self, artist): # artist most popular song in 2023
+
+    def mini_playlist(self, song): 
+    # make playlist based off song given by user and finding songs with similar descriptive values; like 5 songs
 
