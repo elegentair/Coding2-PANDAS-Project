@@ -25,10 +25,35 @@ class data_set:
         artist_sorted = self.data_set.loc[self.data_set["artist(s)_name"] == artist]
         most_popular = artist_sorted.sort_values(by = value, ascending = False)
 
-    # def mini_playlist(self, song): 
+    def mini_playlist(self, song): 
+        index = int((df.loc[df['track_name'] == song]).index[0])
+        acousticness = df.loc[index]["acousticness_%"]
+        danceability =  df.loc[index]["danceability_%"]
+        energy_ = df.loc[index]["energy_%"]
+        valence = df.loc[index]["valence_%"]
+        instrumentalness = df.loc[index]["instrumentalness_%"]
+        bpm = df.loc[index]["bpm"]
+
+        playlist = []
+        track = int((df.loc[df['acousticness_%'] == (acousticness - 1)]).index[0])
+        name = df.loc[track]["track_name"]
+        playlist.append(name)
+        return playlist
+        
+        ## TO DO: 
+        # Harshita: Make 6 different loops for each quality
+        # Sam: Create UT
+        # Make Video on Monday N3
+
+
+
     # # make playlist based off song given by user and finding songs with similar descriptive values; like 5 songs
 
 
 harshita = data_set(df)
 harshita.clean_data()
-harshita.recommend_song("Taylor Swift", "acousticness_%")
+# harshita.recommend_song("Taylor Swift", "acousticness_%")
+print(harshita.mini_playlist("Columbia"))
+#index = int((df.loc[df['track_name'] == "Columbia"]).index[0])
+#print(index)
+
