@@ -29,20 +29,41 @@ class data_set:
         index = int((df.loc[df['track_name'] == song]).index[0])
         acousticness = df.loc[index]["acousticness_%"]
         danceability =  df.loc[index]["danceability_%"]
-        energy_ = df.loc[index]["energy_%"]
+        energy = df.loc[index]["energy_%"]
         valence = df.loc[index]["valence_%"]
         instrumentalness = df.loc[index]["instrumentalness_%"]
         bpm = df.loc[index]["bpm"]
-
         playlist = []
-        track = int((df.loc[df['acousticness_%'] == (acousticness - 1)]).index[0])
-        name = df.loc[track]["track_name"]
-        playlist.append(name)
+        #acousticness
+        track_1 = int((df.loc[df['acousticness_%'] == (acousticness - 1)]).index[0])
+        name_1 = df.loc[track_1]["track_name"]
+        playlist.append(name_1)
+        #danceability
+        track_2 = int((df.loc[df['danceability_%'] == (danceability - 1)]).index[0])
+        name_2 = df.loc[track_2]["track_name"]
+        playlist.append(name_2)
+        #energy
+        track_3 = int((df.loc[df['energy_%'] == (energy - 1)]).index[0])
+        name_3 = df.loc[track_3]["track_name"]
+        playlist.append(name_3)
+        #valence
+        track_4 = int((df.loc[df['valence_%'] == (valence - 1)]).index[0])
+        name_4 = df.loc[track_4]["track_name"]
+        playlist.append(name_4)
+        #instrumentalness
+        track_5 = int((df.loc[df['instrumentalness_%'] == (instrumentalness - 1)]).index[0])
+        name_5 = df.loc[track_5]["track_name"]
+        playlist.append(name_5)
+        #bpm
+        track_6 = int((df.loc[df['bpm'] == (bpm - 1)]).index[0])
+        name_6 = df.loc[track_6]["track_name"]
+        playlist.append(name_6)
+    
         return playlist
         
         ## TO DO: 
         # Harshita: Make 6 different loops for each quality
-        # Sam: Create UT
+        # Sam: Create UI
         # Make Video on Monday N3
 
 
