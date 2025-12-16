@@ -74,7 +74,9 @@ songs = data_set(df)
 songs.clean_data()
 
 # Main UI Loop:
-while 0 == 0:
+# X will be changed to not zero when the user wants to exit, so that the loop stops
+x = 0
+while x == 0:
     #This part prompts the user for which of 3 methods included in the data_set class they want to use
     # UI Bar is printed in the UI for formatting. It makes it look much cleaner, rather than a wall of text.
     ui_bar = "__________________________________________________________________________________"
@@ -82,6 +84,7 @@ while 0 == 0:
     print("Press 1 to get recommended a song.")
     print("Press 2 to get an artists most popular song.")
     print("Press 3 to get recommended a playlist.")
+    print("Press 4 to exit.")
     option = int(input("Option: "))
     print(ui_bar)
     if option == 1:
@@ -138,3 +141,6 @@ while 0 == 0:
         # This for loop provides cleaner output. It prints the songs in the returned list line by line. The "mini_playlist" is our actual call.
         for i in songs.mini_playlist(track):
             print(i)
+    elif option == 4:
+        print("Bye!")
+        x = 1
